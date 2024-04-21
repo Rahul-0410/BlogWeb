@@ -43,11 +43,19 @@ const setupBlog = (data) => {
     const titleTag = document.querySelector('title');
     const publish = document.querySelector('.published');
 
+    const getImageUrl = (imagePath) => {
+        return imagePath.startsWith('http') ? imagePath : `${location.origin}/${imagePath}`;
+      }
+    
+      const bannerImageUrl = getImageUrl(data.bannerImage);
+      banner.style.backgroundImage = `url("${bannerImageUrl}")`;
+      console.log(bannerImageUrl);
+
     // Construct the full URL for the banner image
     // const bannerImageUrl = `${location.origin}/${data.bannerImage}`;
     // banner.style.backgroundImage = `url(${bannerImageUrl})`;
-    console.log(data.bannerImage);
-    banner.innerHTML=`<img src="${data.bannerImage}" class="article-image1">`
+    // console.log(data.bannerImage);
+    // banner.innerHTML=`<img src="${data.bannerImage}" class="article-image1">`
     // console.log(bannerImageUrl);
 
     titleTag.innerHTML += blogTitle.innerHTML = data.title;
