@@ -39,7 +39,6 @@ const setupBlog = (data) => {
     addArticle(article, data.article);
 }
 
-// ... (rest of the code remains the same)
 
 const addArticle = (ele, data) => {
     data = data.split("\n").filter(item => item.length);
