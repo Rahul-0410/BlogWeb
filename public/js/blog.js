@@ -1,30 +1,4 @@
-// let blogId = decodeURI(location.pathname.split("/").pop());
 
-// let docRef = db.collection("blogs").doc(blogId);
-
-// docRef.get().then((doc) => {
-//     if(doc.exists){
-//         setupBlog(doc.data());
-//     } else{
-//         location.replace("/");
-//     }
-// })
-
-// const setupBlog = (data) => {
-//     const banner = document.querySelector('.banner');
-//     const blogTitle = document.querySelector('.title');
-//     const titleTag = document.querySelector('title');
-//     const publish = document.querySelector('.published');
-//     // const bannerImageUrl = data.bannerImage ?? '';
-//     banner.style.backgroundImage = `url(${data.bannerImage})`;
-//     console.log(data.bannerImage);
-
-//     titleTag.innerHTML += blogTitle.innerHTML = data.title;
-//     publish.innerHTML += data.publishedAt;
-
-//     const article = document.querySelector('.article');
-//     addArticle(article, data.article);
-// }
 let blogId = decodeURI(location.pathname.split("/").pop());
 
 let docRef = db.collection("blogs").doc(blogId);
